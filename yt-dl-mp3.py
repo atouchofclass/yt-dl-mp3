@@ -101,8 +101,14 @@ def downloadMp3(link, options):
         # TODO check if it works with list of links
         try:
             ydl.download([link])
-        except (youtube_dl.DownloadError, youtube_dl.SameFileError) as err:
-            print(err)
+        except youtube_dl.DownloadError as err:
+            # clear cache on 403 error
+            if str(err).endswith("HTTP Error 403: Forbidden"):
+                print('[INFO] Detected 403 error. Attempting to automatically clear the cache...')
+                ydl.cache.remove()
+                print('[IMFO] YoutubeDL cache was cleared. Try downloading again.')
+        except youtube_dl.SameFileError as err:
+            pass
 
 if __name__ == '__main__':
     print('+----------------------------------------------------------+')
