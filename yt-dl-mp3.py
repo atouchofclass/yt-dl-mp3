@@ -30,6 +30,7 @@ class Logger(object):
 ydl_opts = {
     'format': 'bestaudio/best',
     'writethumbnail': True,
+    'updatetime': False,
     'postprocessors': [
         {
             'key': 'FFmpegExtractAudio',
