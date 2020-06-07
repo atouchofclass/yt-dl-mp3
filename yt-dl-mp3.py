@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 '''
-    YT-DL-MP3 -- v. 2020.04.29.0
+    YT-DL-MP3 -- v. 2020.06.07.0
     A small command-line tool with a simple set of options for downloading MP3s using youtube-dl
     Copyright (c) 2020 atouchofclass
 
-    Uses youtube-dl <github.com/ytdl-org/youtube-dl> under license
+    Portions use youtube-dl <github.com/ytdl-org/youtube-dl> under license
 '''
 
 from __future__ import unicode_literals
