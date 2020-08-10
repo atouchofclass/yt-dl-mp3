@@ -1,2 +1,2 @@
 future==0.17.1
-youtube-dl==2020.3.24
+youtube-dl
